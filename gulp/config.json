@@ -34,7 +34,7 @@
             "directory" : "./dist/"
         },
         "temp" :"./src/temp/sprite/",
-        "src" : "./src/icons/**/*.svg"
+        "src" : "./src/icon/**/*.svg"
     },
     "images" : {
         "dist" : {

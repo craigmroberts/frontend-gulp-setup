@@ -13,7 +13,7 @@ const $ = require("gulp-load-plugins")({
 gulp.task('beginClean', function() {
     return $.del([config.icons.temp, config.icons.dist + 'sprite-*']);
 });
-gulp.task('createSprite', gulp.series('beginClean'), function(done) {
+gulp.task('createSprite', function() {
     var spriteConfig = {
         shape: {
             dimension: { // Set maximum dimensions
@@ -44,48 +44,32 @@ gulp.task('createSprite', gulp.series('beginClean'), function(done) {
     }
 
     return gulp.src(config.icons.src)
-        .pipe($.svgSprites(spriteConfig))
+        .pipe($.svgSprite(spriteConfig))
         .pipe(gulp.dest(config.icons.temp));
 });
 
-gulp.task('createPngCopy', gulp.series('createSprite'), function(done) {
-    return gulp.src(config.icons.temp + 'styles/*.svg')
+gulp.task('createPngCopy', function() {
+    return gulp.src(config.icons.temp + 'css/*.svg')
         .pipe($.svg2png())
-        .pipe(gulp.dest(config.icons.temp + 'styles'))
+        .pipe(gulp.dest(config.icons.temp + 'css'))
 });
 
-gulp.task('copySpriteGraphic', gulp.series('createPngCopy'), function(done) {
-    return gulp.src(config.icons.temp + 'styles/**/*.{svg,png}')
-        .pipe(gulp.dest(config.icons.dist));
+gulp.task('copySpriteGraphic', function() {
+    return gulp.src(config.icons.temp + 'css/*.{svg,png}')
+        .pipe(gulp.dest(config.icons.dist.directory));
 });
 
-gulp.task('copySpriteCss', gulp.series('createSprite'), function(done) {
-    return gulp.src(config.icons.temp + 'styles/**/*.css')
-    .pipe($.rename('_sprite-icons.scss'))
-    .pipe(gulp.dest('./src/scss'));
+gulp.task('copySpriteCss', function() {
+    return gulp.src(config.icons.temp + 'css/*.css')
+    .pipe($.rename('_icons.scss'))
+    .pipe(gulp.dest('./src/style/sprite'));
 });
 
-gulp.task('endClean', gulp.series('copySpriteGraphic', 'copySpriteCss'), function(done) {
+gulp.task('endClean', function() {
     return $.del([config.icons.temp]);
 });
 
-gulp.task('icons', gulp.series('beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCss', 'endClean'), function(done) {
+// TASK : SPRITE ICONS
+gulp.task('sprite-icons', gulp.series('beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCss', 'endClean'), function(done) {
 
-});
-
-gulp.task('fonts', function () {
-    // Endless stream mode
-
-    return $.watch(config.fonts.src, function (obj) {
-        var file = new $.vinyl(obj);
-
-        if (obj.event == 'unlink') {
-            file = config.fonts.dist + path.basename(file.history[0]);
-            $.del([file]);
-        } else if (obj.event == 'add') {
-            file = file.history[0];
-            gulp.src(file)
-            .pipe(gulp.dest(config.fonts.dist));
-        }
-    });
 });

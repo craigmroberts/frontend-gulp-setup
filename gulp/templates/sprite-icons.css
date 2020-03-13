@@ -5,17 +5,17 @@
 {{#shapes}}
     {{#first}}
     .icon {
-        background-image: url('../assets/{{{sprite}}}');
+        background-image: url('../dist/{{{sprite}}}');
         display: block;
     }
 
     .icon--after::after {
-        background-image: url('../assets/{{{sprite}}}');
+        background-image: url('../dist/{{{sprite}}}');
         display: block;
     }
 
     .icon--before::before {
-        background-image: url('../assets/{{{sprite}}}');
+        background-image: url('../dist/{{{sprite}}}');
         display: block;
     }
 
@@ -25,7 +25,7 @@
     }
 
     .no-svg .icon {
-        background-image: url('../assets/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+        background-image: url('../dist/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
     }
     {{/first}}
     .icon--{{base}} {
