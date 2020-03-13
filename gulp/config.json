@@ -36,6 +36,13 @@
         "temp" :"./src/temp/sprite/",
         "src" : "./src/icon/**/*.svg"
     },
+    "logos" : {
+        "dist" : {
+            "directory" : "./dist/"
+        },
+        "temp" :"./src/temp/sprite/",
+        "src" : "./src/icon/**/*.svg"
+    },
     "images" : {
         "dist" : {
             "directory" : "./dist/"
