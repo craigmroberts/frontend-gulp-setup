@@ -33,7 +33,8 @@
         "dist" : {
             "directory" : "./dist/"
         },
-        "src" : "./src/icon/**/*.{jpg,jpeg,png,gif,svg}"
+        "temp" :"./src/temp/sprite/",
+        "src" : "./src/icons/**/*.svg"
     },
     "images" : {
         "dist" : {

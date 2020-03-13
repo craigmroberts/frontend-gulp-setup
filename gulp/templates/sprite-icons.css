@@ -1,0 +1,36 @@
+/*  * Do not edit modules/_sprite.css directly as it is generated automatically by gulp
+    * Instead edit gulp/templates/sprite
+*/
+
+{{#shapes}}
+    {{#first}}
+    .icon {
+        background-image: url('../assets/{{{sprite}}}');
+        display: block;
+    }
+
+    .icon--after::after {
+        background-image: url('../assets/{{{sprite}}}');
+        display: block;
+    }
+
+    .icon--before::before {
+        background-image: url('../assets/{{{sprite}}}');
+        display: block;
+    }
+
+    .icon--white {
+        filter:brightness(0) invert(1);
+        -webkit-filter:brightness(0) invert(1);
+    }
+
+    .no-svg .icon {
+        background-image: url('../assets/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+    }
+    {{/first}}
+    .icon--{{base}} {
+        width: {{width.outer}}px;
+        height: {{height.outer}}px;
+        background-position: {{position.relative.xy}};
+    }
+{{/shapes}}
