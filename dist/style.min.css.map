@@ -1,0 +1,1 @@
+{"version":3,"sources":["abstracts/_variables.scss"],"names":[],"mappings":"AAGA,KACI,eAJc,CAKd,cAAe","file":"style.min.css","sourcesContent":["$black : \"#000000\";\n$white : \"#FFFFFF\";\n\nbody {\n    color: $black;\n    font-size: 18px;\n}\n\n"]}

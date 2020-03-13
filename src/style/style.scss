@@ -1,0 +1,32 @@
+
+// VENDORS
+@import 'vendors/animate';
+@import 'vendors/slick';
+
+// ABSTRACTS
+@import 'abstracts/color';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// BASE
+@import 'base/body';
+@import 'base/a';
+@import 'base/img';
+
+// COMPNENT
+@import 'component/button';
+@import 'component/link';
+@import 'component/menu';
+
+// LAYOUT
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+
+// PAGES
+@import 'pages/404';
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/home';

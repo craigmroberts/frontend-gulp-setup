@@ -1,0 +1,9 @@
+{
+    "styles" : {
+        "dist" : {
+            "directory" : "./dist/",
+            "filename" : "style.min.css"
+        },
+        "src" : "./src/style/**/*.scss"
+    }
+}
