@@ -4,10 +4,11 @@
 @import 'vendors/slick';
 
 // ABSTRACTS
-@import 'abstracts/color';
+@import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import 'abstracts/text-color';
+@import 'abstracts/bg-color';
 
 // BASE
 @import 'base/body';
