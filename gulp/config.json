@@ -1,9 +1,19 @@
 {
+    "package" : {
+        "directory" : "../../package.json"
+    },
     "styles" : {
         "dist" : {
             "directory" : "./dist/",
             "filename" : "style.min.css"
         },
         "src" : "./src/style/**/*.scss"
+    },
+    "scripts" : {
+        "dist" : {
+            "directory" : "./dist/",
+            "filename" : "script.min.js"
+        },
+        "src" : "./src/script/**/*.js"
     }
 }

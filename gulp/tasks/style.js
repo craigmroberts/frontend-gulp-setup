@@ -1,7 +1,7 @@
 'use strict';
 const
     config = require("../config.json"),
-    pkg = require("../../package.json"),
+    pkg = require(config.package.directory),
     gulp = require("gulp");
 
 // load all plugins in "devDependencies" into the variable $
@@ -27,6 +27,3 @@ gulp.task('styles', function () {
         .pipe(gulp.dest(config.styles.dist.directory));
     });
 });
-
-
-
