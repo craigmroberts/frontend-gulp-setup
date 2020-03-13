@@ -15,5 +15,11 @@
             "filename" : "script.min.js"
         },
         "src" : "./src/script/**/*.js"
+    },
+    "fonts" : {
+        "dist" : {
+            "directory" : "./dist/"
+        },
+        "src" : "./src/font/**/*.{eot,svg,ttf,woff,woff2}"
     }
 }
