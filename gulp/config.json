@@ -27,5 +27,11 @@
             "directory" : "./dist/"
         },
         "src" : "./src/icon/**/*.{jpg,jpeg,png,gif,svg}"
+    },
+    "images" : {
+        "dist" : {
+            "directory" : "./dist/"
+        },
+        "src" : "./src/image/**/*.{jpg,jpeg,png,gif,svg}"
     }
 }
