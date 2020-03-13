@@ -22,11 +22,13 @@ const $ = require("gulp-load-plugins")({
 gulp.task('scripts', function () {
     return $.watch(config.scripts.src, function () {
         gulp.src(config.scripts.src)
+        .pipe($.sourcemaps.init())
         .pipe($.babel())
         .pipe($.concat(config.scripts.dist.filename))
         .pipe(gulp.dest(config.scripts.dist.directory))
         .pipe($.rename(config.scripts.dist.filename))
         .pipe($.uglify())
+        .pipe($.sourcemaps.write('.'))
         .pipe(gulp.dest(config.scripts.dist.directory));
     });
 });
