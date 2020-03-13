@@ -34,14 +34,14 @@
             "directory" : "./dist/"
         },
         "temp" :"./src/temp/sprite/",
-        "src" : "./src/icon/**/*.svg"
+        "src" : "./src/sprite-icon/**/*.svg"
     },
     "logos" : {
         "dist" : {
             "directory" : "./dist/"
         },
         "temp" :"./src/temp/sprite/",
-        "src" : "./src/icon/**/*.svg"
+        "src" : "./src/sprite-logo/**/*.svg"
     },
     "images" : {
         "dist" : {
