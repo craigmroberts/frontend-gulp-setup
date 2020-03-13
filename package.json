@@ -8,7 +8,9 @@
   },
   "devDependencies": {
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0"
+    "gulp-babel": "^8.0.0",
+    "gulp-favicons": "^2.4.0",
+    "gulp-rename": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
