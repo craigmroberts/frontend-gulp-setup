@@ -18,6 +18,7 @@ gulp.task('php', function(){
 
 gulp.task('browsersync', gulp.series('php'), function(done) {
     browserSync.init({
+        injectChanges: true,
         proxy:"localhost:8010",
         baseDir: "./",
         open:true,
@@ -26,5 +27,5 @@ gulp.task('browsersync', gulp.series('php'), function(done) {
 });
 
 gulp.task('dev', gulp.series('browsersync'), function(done) {
-    gulp.watch('./*.php', browserSync.reload);
+    gulp.watch('./**/*.php', browserSync.stream);
 });
