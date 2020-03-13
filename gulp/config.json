@@ -2,6 +2,13 @@
     "package" : {
         "directory" : "../../package.json"
     },
+    "site" : {
+        "name" : "My Site",
+        "discription" : "My sites description",
+        "developer" : "",
+        "developerUrl" : "",
+        "url" : "https://mysite.com/"
+    },
     "styles" : {
         "dist" : {
             "directory" : "./dist/",
@@ -33,5 +40,11 @@
             "directory" : "./dist/"
         },
         "src" : "./src/image/**/*.{jpg,jpeg,png,gif,svg}"
+    },
+    "favicons" : {
+        "dist" : {
+            "directory" : "./dist/favicon/"
+        },
+        "src" : "./src/favicon/favicon.{jpg,jpeg,png,gif,svg}"
     }
 }
