@@ -1,0 +1,23 @@
+{
+  "name": "frontend-gulp-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigmroberts/frontend-gulp-setup.git"
+  },
+  "author": "Craig M Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craigmroberts/frontend-gulp-setup/issues"
+  },
+  "homepage": "https://github.com/craigmroberts/frontend-gulp-setup#readme"
+}
