@@ -21,5 +21,11 @@
             "directory" : "./dist/"
         },
         "src" : "./src/font/**/*.{eot,svg,ttf,woff,woff2}"
+    },
+    "icons" : {
+        "dist" : {
+            "directory" : "./dist/"
+        },
+        "src" : "./src/icon/**/*.{jpg,jpeg,png,gif,svg}"
     }
 }
