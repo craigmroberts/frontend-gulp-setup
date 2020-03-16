@@ -17,6 +17,7 @@
     "gulp-connect-php": "^1.0.3",
     "gulp-favicons": "^2.4.0",
     "gulp-load-plugins": "^2.0.2",
+    "gulp-purgecss": "^2.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",

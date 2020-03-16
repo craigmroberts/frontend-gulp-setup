@@ -23,7 +23,11 @@ gulp.task('styles', function () {
         .pipe($.rename(config.styles.dist.filename))
         .pipe($.replace('"{{', '{{')) // SHOPIFY LIQUID
         .pipe($.replace('}}"', '}}')) // SHOPIFY LIQUID
+        .pipe($.purgecss({
+            content: ['**/*.php','**/*.html']
+        }))
         .pipe($.sourcemaps.write('.'))
-        .pipe(gulp.dest(config.styles.dist.directory));
+        .pipe(gulp.dest(config.styles.dist.directory))
+        .pipe($.browserSync.stream());
     });
 });
