@@ -29,6 +29,7 @@ gulp.task('scripts', function () {
         .pipe($.rename(config.scripts.dist.filename))
         .pipe($.uglify())
         .pipe($.sourcemaps.write('.'))
-        .pipe(gulp.dest(config.scripts.dist.directory));
+        .pipe(gulp.dest(config.scripts.dist.directory))
+        .pipe($.browserSync.stream());
     });
 });
